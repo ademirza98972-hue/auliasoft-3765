@@ -1192,6 +1192,137 @@
         line-height: 1.5;
       }
 
+      /* PRODUCT ROADMAP */
+      .rm-timeline {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr auto 1fr;
+        gap: 0;
+        align-items: start;
+        margin-top: 2rem;
+      }
+      .rm-col {
+        background: #fff;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .rm-col:hover {
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+        transform: translateY(-4px);
+      }
+      .rm-header {
+        padding: 1.5rem 1.3rem 1.2rem;
+        text-align: center;
+        position: relative;
+      }
+      .rm-basic .rm-header {
+        background: linear-gradient(135deg, var(--primary-light) 0%, #fff 100%);
+        border-bottom: 3px solid var(--primary);
+      }
+      .rm-standard .rm-header {
+        background: linear-gradient(135deg, rgba(232,130,12,0.1) 0%, #fff 100%);
+        border-bottom: 3px solid var(--accent);
+      }
+      .rm-premium .rm-header {
+        background: linear-gradient(135deg, rgba(5,150,105,0.1) 0%, #fff 100%);
+        border-bottom: 3px solid var(--green);
+      }
+      .rm-badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 700;
+        padding: 0.25rem 0.7rem;
+        border-radius: 100px;
+        margin-bottom: 0.5rem;
+        background: var(--primary);
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .rm-badge-pop {
+        background: var(--accent);
+      }
+      .rm-badge-top {
+        background: var(--green);
+      }
+      .rm-ver {
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 0.3rem;
+      }
+      .rm-tagline {
+        font-size: 0.75rem;
+        color: var(--muted);
+        line-height: 1.5;
+        font-style: italic;
+      }
+      .rm-features {
+        padding: 1rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .rm-feat-item {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-size: 0.78rem;
+        color: var(--text);
+        line-height: 1.4;
+        padding: 0.3rem 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .rm-feat-item:last-child {
+        border-bottom: none;
+      }
+      .rm-feat-icon {
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .rm-feat-txt {
+        font-weight: 500;
+      }
+      .rm-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.5rem;
+        padding-top: 4.5rem;
+      }
+      .rm-arrow-line {
+        width: 32px;
+        height: 2px;
+        background: var(--primary-mid);
+        position: relative;
+      }
+      .rm-arrow-head {
+        position: absolute;
+        right: 8px;
+        color: var(--primary);
+        font-size: 0.8rem;
+      }
+      .rm-note {
+        margin-top: 2rem;
+        background: linear-gradient(135deg, var(--primary-light) 0%, #fff 100%);
+        border: 1.5px solid var(--primary-mid);
+        border-radius: var(--radius);
+        padding: 1rem 1.4rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .rm-note-icon {
+        font-size: 1.1rem;
+        flex-shrink: 0;
+      }
+      .rm-note strong {
+        color: var(--primary);
+      }
+
       /* PERBANDINGAN */
       .compare-wrap {
         overflow-x: auto;
@@ -1251,6 +1382,561 @@
       }
       .no {
         color: #ef4444;
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .brand-text p {
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 0.92rem;
+      }
+      .brand-values {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 0.5rem;
+      }
+      .bval {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        background: var(--primary-light);
+        border: 1px solid var(--primary-mid);
+        border-radius: 8px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .bval-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      .brand-stats-row {
+        display: flex;
+        gap: 1.5rem;
+        padding-top: 0.5rem;
+      }
+      .bstat-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+      .bstat-num {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: var(--primary);
+        line-height: 1;
+      }
+      .bstat-lbl {
+        font-size: 0.7rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+      .brand-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+      .brand-logo-showcase {
+        background: #fff;
+        border: 1.5px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 2rem;
+        text-align: center;
+        width: 100%;
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      }
+      .blc-icon {
+        width: 64px;
+        height: 64px;
+        background: var(--primary);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: #fff;
+      }
+      .blc-name {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 0.2rem;
+      }
+      .blc-tagline {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.5;
+        margin-bottom: 1.2rem;
+      }
+      .blc-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        justify-content: center;
+      }
+      .blc-chip {
+        background: var(--primary-light);
+        border: 1px solid var(--primary-mid);
+        border-radius: 6px;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: var(--primary);
+      }
+      .brand-badge-row {
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .bbdg {
+        background: var(--green-light);
+        border: 1px solid rgba(5, 150, 105, 0.2);
+        border-radius: 8px;
+        padding: 0.5rem 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--green);
+      }
+      .bbdg-icon {
+        font-size: 0.9rem;
+      }
+
+      .uc-exp-wrap {
+        margin-top: 2rem;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      .uc-exp-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.4rem 1.2rem;
+        transition: all 0.25s;
+      }
+      .uc-exp-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 4px 14px rgba(26, 60, 110, 0.08);
+        transform: translateY(-2px);
+      }
+      .uc-exp-num {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 800;
+        margin-bottom: 0.8rem;
+      }
+      .uc-exp-title {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--text);
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+      }
+      .uc-exp-desc {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.65;
+        margin-bottom: 0.8rem;
+      }
+      .uc-exp-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .uc-exp-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.4rem;
+        font-size: 0.77rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .uc-exp-list li::before {
+        content: "→";
+        color: var(--accent);
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .uc-exp-img {
+        margin-top: 1.5rem;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      }
+      .uc-exp-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .uc-exp-img-caption {
+        text-align: center;
+        font-size: 0.73rem;
+        color: var(--muted);
+        padding: 0.6rem 1rem;
+        background: var(--light);
+        border-top: 1px solid var(--border);
+      }
+
+      /* TARGET AUDIENCE */
+      .tgt-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: center;
+        margin-top: 2rem;
+      }
+      .tgt-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .tgt-left > p {
+        color: var(--muted);
+        line-height: 1.85;
+        font-size: 0.92rem;
+      }
+      .tgt-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.3rem;
+        transition: all 0.25s;
+      }
+      .tgt-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 4px 14px rgba(26, 60, 110, 0.07);
+        transform: translateY(-2px);
+      }
+      .tgt-card-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.8rem;
+        font-size: 1.15rem;
+      }
+      .tgt-card-title {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--text);
+        margin-bottom: 0.4rem;
+      }
+      .tgt-card-desc {
+        font-size: 0.8rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+      .tgt-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+      .ttag {
+        background: var(--primary-light);
+        border: 1px solid var(--primary-mid);
+        border-radius: 6px;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.73rem;
+        font-weight: 600;
+        color: var(--primary);
+        transition: all 0.2s;
+      }
+      .ttag:hover {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+      }
+      .tgt-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .tgt-toko-list {
+        background: #fff;
+        border: 1.5px solid rgba(232, 130, 12, 0.15);
+        border-radius: var(--radius-lg);
+        padding: 1.8rem;
+        box-shadow: 0 4px 16px rgba(232, 130, 12, 0.06);
+      }
+      .ttl-title {
+        font-weight: 700;
+        font-size: 0.88rem;
+        color: var(--text);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .ttl-title span {
+        font-size: 1rem;
+      }
+      .ttl-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .tti {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: var(--light);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--muted);
+        transition: all 0.2s;
+      }
+      .tti:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+        background: var(--accent-light);
+      }
+      .tti-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--accent);
+        flex-shrink: 0;
+      }
+      .tgt-org-box {
+        background: var(--primary);
+        border-radius: var(--radius-lg);
+        padding: 1.5rem 1.8rem;
+        color: #fff;
+      }
+      .tob-title {
+        font-weight: 700;
+        font-size: 0.88rem;
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .tob-title span {
+        font-size: 1rem;
+      }
+      .tob-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .tobi {
+        display: flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .tobi-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #fde68a;
+        flex-shrink: 0;
+      }
+
+      .tgt-image-wrap {
+        margin-top: 1.8rem;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      }
+      .tgt-image-wrap img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /* CUSTOMIZATION */
+      .cust-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+        align-items: center;
+        margin-top: 2rem;
+      }
+      .cust-left {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+      .cust-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+      .cust-header-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: var(--primary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        flex-shrink: 0;
+      }
+      .cust-header-text h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.2rem;
+        line-height: 1.3;
+      }
+      .cust-header-text p {
+        font-size: 0.82rem;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .cust-desc {
+        font-size: 0.9rem;
+        color: var(--muted);
+        line-height: 1.8;
+        background: var(--light);
+        border-radius: var(--radius);
+        padding: 1rem 1.2rem;
+        border-left: 3px solid var(--accent);
+      }
+      .cust-desc strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .cust-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+      .cust-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1rem 1.1rem;
+        transition: all 0.2s;
+      }
+      .cust-card:hover {
+        border-color: var(--primary);
+        box-shadow: 0 3px 10px rgba(26, 60, 110, 0.07);
+        transform: translateY(-2px);
+      }
+      .cust-card-icon {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+      .cust-card-title {
+        font-size: 0.82rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.2rem;
+      }
+      .cust-card-desc {
+        font-size: 0.73rem;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+      .cust-right {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .cust-img-box {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border);
+        box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      }
+      .cust-img-box img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .cust-img-caption {
+        font-size: 0.72rem;
+        color: var(--muted);
+        text-align: center;
+        padding: 0.6rem 1rem;
+        background: var(--light);
+        border-top: 1px solid var(--border);
+      }
+      .cust-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .cust-step {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 0.7rem 1rem;
+        transition: all 0.2s;
+      }
+      .cust-step:hover {
+        border-color: var(--accent);
+        background: var(--accent-light);
+      }
+      .cust-step-num {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .cust-step-text {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--text);
+        line-height: 1.4;
+      }
+      .cust-step:hover .cust-step-num {
+        background: var(--accent);
       }
 
       /* SEJARAH */
@@ -1691,6 +2377,178 @@
         text-align: center;
       }
 
+      /* PROCESSES AND POLICIES */
+      #processes {
+        background: var(--light);
+        padding: 5rem 5%;
+        text-align: center;
+      }
+      .proc-inner {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .proc-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--green);
+        background: var(--green-light);
+        border: 1px solid #a7f3d0;
+        padding: 0.3rem 1rem;
+        border-radius: 100px;
+        margin-bottom: 1.2rem;
+      }
+      .proc-title {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 0.8rem;
+        letter-spacing: -0.02em;
+      }
+      .proc-subtitle {
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto 3rem;
+      }
+      .proc-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        text-align: left;
+      }
+      .proc-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 2rem 1.8rem;
+        transition: box-shadow 0.25s;
+      }
+      .proc-card:hover {
+        box-shadow: 0 8px 30px rgba(26, 60, 110, 0.1);
+      }
+      .proc-icon {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+      }
+      .proc-card h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 0.7rem;
+      }
+      .proc-card p {
+        font-size: 0.88rem;
+        color: var(--muted);
+        line-height: 1.75;
+      }
+      @media (max-width: 768px) {
+        .proc-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* COMPETITOR / MITRA */
+      #competitor {
+        background: var(--white);
+        padding: 5rem 5%;
+        text-align: center;
+      }
+      .comp2-inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .comp2-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--primary);
+        background: var(--primary-light);
+        border: 1px solid var(--primary-mid);
+        padding: 0.3rem 1rem;
+        border-radius: 100px;
+        margin-bottom: 1.2rem;
+      }
+      .comp2-title {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+      .comp2-desc {
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+      }
+      .comp2-img-wrap {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(26, 60, 110, 0.1);
+        border: 1px solid var(--border);
+      }
+      .comp2-img-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* COMPLEMENTARY */
+      #complementary {
+        background: var(--light);
+        padding: 5rem 5%;
+        text-align: center;
+      }
+      .comp-inner {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+      .comp-badge {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        background: var(--accent-light);
+        border: 1px solid #f5d09a;
+        padding: 0.3rem 1rem;
+        border-radius: 100px;
+        margin-bottom: 1.2rem;
+      }
+      .comp-title {
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        letter-spacing: -0.02em;
+      }
+      .comp-desc {
+        font-size: 0.95rem;
+        color: var(--muted);
+        line-height: 1.8;
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+      }
+      .comp-img-wrap {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: 0 8px 40px rgba(26, 60, 110, 0.12);
+        border: 1px solid var(--border);
+      }
+      .comp-img-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
       /* FOOTER */
       footer {
         background: #0f172a;
@@ -1808,6 +2666,13 @@
           grid-template-columns: 1fr;
           gap: 2rem;
         }
+        .rm-timeline {
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+        }
+        .rm-arrow {
+          display: none;
+        }
         .feedback-inner {
           grid-template-columns: 1fr;
           gap: 2rem;
@@ -1816,6 +2681,21 @@
           grid-template-columns: 1fr 1fr;
         }
         .garansi-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .tgt-wrap {
+          grid-template-columns: 1fr;
+        }
+        .tgt-right {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .tgt-toko-list,
+        .tgt-org-box {
+          flex: 1;
+          min-width: 240px;
+        }
+        .uc-exp-wrap {
           grid-template-columns: repeat(2, 1fr);
         }
       }
@@ -1875,8 +2755,25 @@
         .garansi-grid {
           grid-template-columns: 1fr 1fr;
         }
+        .tgt-right {
+          flex-direction: column;
+        }
+        .tgt-toko-list,
+        .tgt-org-box {
+          min-width: 100%;
+        }
         .compat-grid {
           grid-template-columns: 1fr;
+        }
+        .uc-exp-wrap {
+          grid-template-columns: 1fr;
+        }
+        .rm-timeline {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+        .rm-arrow {
+          display: none;
         }
         .security-grid {
           grid-template-columns: 1fr;
@@ -1949,6 +2846,7 @@
         <li><a href="#fitur">Fitur</a></li>
         <li><a href="#paket">Harga</a></li>
         <li><a href="#cara-pakai">Cara Pakai</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#usecase">Use Case</a></li>
         <li><a href="#perbandingan">Perbandingan</a></li>
         <li><a href="#testimoni">Testimoni</a></li>
@@ -1972,6 +2870,7 @@
         <li><a href="#fitur" onclick="closeMob()">Fitur Produk</a></li>
         <li><a href="#paket" onclick="closeMob()">Harga & Paket</a></li>
         <li><a href="#cara-pakai" onclick="closeMob()">Cara Pakai</a></li>
+        <li><a href="#roadmap" onclick="closeMob()">Roadmap</a></li>
         <li><a href="#perbandingan" onclick="closeMob()">Perbandingan</a></li>
         <li><a href="#testimoni" onclick="closeMob()">Testimoni</a></li>
         <li><a href="#faq" onclick="closeMob()">FAQ</a></li>
@@ -2029,6 +2928,180 @@
               <div class="hfb-lbl">Pembayaran Digital<br />Terintegrasi</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRAND SECTION -->
+    <section id="brand" style="background: var(--light); padding: 64px 5%;">
+      <div class="reveal" style="max-width: 1120px; margin: 0 auto;">
+        <div class="center" style="margin-bottom: 2.5rem;">
+          <span class="sec-tag">Tentang Kami</span>
+          <h2>Kenalan dengan <em>AuliaSoft</em></h2>
+          <p class="sec-sub">
+            Lebih dari sekadar aplikasi kasir — kami membangun solusi teknologi
+            yang membantu pelaku UMKM Indonesia berkembang.
+          </p>
+        </div>
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 2.5rem; align-items: center;">
+          <!-- Left: Text -->
+          <div class="brand-text reveal">
+            <p>
+              AuliaSoft lahir dari kebutuhan nyata para pemilik usaha kecil dan
+              menengah yang ingin mengelola toko mereka secara lebih efisien.
+              Dengan pengalaman lebih dari bertahun-tahun di industri aplikasi
+              kasir, kami memahami persis tantang solusi apa yang dibutuhkan
+              pelaku UMKM Indonesia.
+            </p>
+            <p>
+              Nama "AuliaSoft" terinspirasi dari nilai-nilai kami — Aulia berarti
+              "kebaikan dan ketulusan" — yang tercermin dalam setiap fitur yang
+              kami bangun: sederhana, terjangkau, dan selalu mengutamakan
+              kemudahan pengguna.
+            </p>
+            <div class="brand-values">
+              <div class="bval">
+                <span class="bval-dot"></span>Solusi Terjangkau
+              </div>
+              <div class="bval">
+                <span class="bval-dot"></span>Ramah UMKM
+              </div>
+              <div class="bval">
+                <span class="bval-dot"></span>Simpel & Praktis
+              </div>
+              <div class="bval">
+                <span class="bval-dot"></span>Support Cepat
+              </div>
+            </div>
+            <div class="brand-stats-row">
+              <div class="bstat-item">
+                <span class="bstat-num">53+</span>
+                <span class="bstat-lbl">Klien Aktif</span>
+              </div>
+              <div class="bstat-item">
+                <span class="bstat-num">1,5 th</span>
+                <span class="bstat-lbl">Garansi</span>
+              </div>
+              <div class="bstat-item">
+                <span class="bstat-num">24/7</span>
+                <span class="bstat-lbl">Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual -->
+          <div class="brand-right reveal">
+            <div class="brand-logo-showcase">
+              <div class="blc-logo" style="margin-bottom: 1rem;">
+                <img src="https://www.auliasoft.com/assets/images/logo/logo.png" alt="Logo AuliaSoft" style="height: 56px; width: auto; display: block; margin: 0 auto;" />
+              </div>
+              <div class="blc-name">AuliaSoft</div>
+              <div class="blc-tagline">Aplikasi Kasir & Toko Online untuk UMKM Indonesia</div>
+              <div class="blc-chips">
+                <span class="blc-chip">E-POS</span>
+                <span class="blc-chip">Toko Online</span>
+                <span class="blc-chip">Kasir</span>
+                <span class="blc-chip">Stok</span>
+                <span class="blc-chip">Laporan</span>
+                <span class="blc-chip">QRIS</span>
+                <span class="blc-chip">Multi-cabang</span>
+              </div>
+            </div>
+            <div class="brand-badge-row">
+              <div class="bbdg">
+                <span class="bbdg-icon">🛡️</span>Garansi 1,5 Tahun
+              </div>
+              <div class="bbdg">
+                <span class="bbdg-icon">⚡</span>Setup Cepat
+              </div>
+              <div class="bbdg">
+                <span class="bbdg-icon">📱</span>Multi-Platform
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="div"></div>
+
+    <!-- TARGET AUDIENCE -->
+    <section id="target-audience" style="background: var(--light);">
+      <div class="reveal" style="max-width: 1120px; margin: 0 auto;">
+        <div class="center" style="margin-bottom: 2rem;">
+          <span class="sec-tag">Target Pasar</span>
+          <h2>Siapa yang <em>Membutuhkan</em> AuliaSoft?</h2>
+          <p class="sec-sub">
+            AuliaSoft dirancang khusus untuk pelaku UMKM dan organisasi yang
+            membutuhkan sistem kasir & toko online yang praktis dan terpercaya.
+          </p>
+        </div>
+        <div class="tgt-wrap">
+          <!-- Left: Cards -->
+          <div class="tgt-left reveal">
+            <div class="tgt-card">
+              <div class="tgt-card-icon">🏪</div>
+              <div class="tgt-card-title">Usaha Toko Fisik</div>
+              <div class="tgt-card-desc">
+                Dirancang untuk toko berbasis fisik seperti toko kelontong,
+                minimarket, klinik, laundry, hingga toko bangunan yang
+                membutuhkan pengelolaan transaksi dan stok secara otomatis.
+              </div>
+              <div class="tgt-tags">
+                <span class="ttag">Kelola Stok</span>
+                <span class="ttag">Kasir</span>
+                <span class="ttag">Laporan</span>
+              </div>
+            </div>
+            <div class="tgt-card">
+              <div class="tgt-card-icon">🏢</div>
+              <div class="tgt-card-title">Organisasi & Lembaga</div>
+              <div class="tgt-card-desc">
+                Cocok untuk cooperativa, BUMDes, dan UKM yang membutuhkan
+                software dengan legalitas jelas (berbadan hukum PT) serta
+                sistem yang stabil dan terintegrasi.
+              </div>
+              <div class="tgt-tags">
+                <span class="ttag">Legalitas PT</span>
+                <span class="ttag">Multi-cabang</span>
+                <span class="ttag">Inventaris</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: List boxes -->
+          <div class="tgt-right reveal">
+            <div class="tgt-toko-list">
+              <div class="ttl-title">
+                <span>🏪</span> Jenis Usaha Toko Fisik
+              </div>
+              <div class="ttl-items">
+                <div class="tti"><span class="tti-dot"></span>Toko Kelontong</div>
+                <div class="tti"><span class="tti-dot"></span>Minimarket</div>
+                <div class="tti"><span class="tti-dot"></span>Klinik</div>
+                <div class="tti"><span class="tti-dot"></span>Laundry</div>
+                <div class="tti"><span class="tti-dot"></span>Toko Bangunan</div>
+                <div class="tti"><span class="tti-dot"></span>Cafe & Resto</div>
+                <div class="tti"><span class="tti-dot"></span>Apotek</div>
+                <div class="tti"><span class="tti-dot"></span>Toko Retail</div>
+              </div>
+            </div>
+            <div class="tgt-org-box">
+              <div class="tob-title">
+                <span>🏢</span> Organisasi & UKM
+              </div>
+              <div class="tob-items">
+                <div class="tobi"><span class="tobi-dot"></span>Coopersiva</div>
+                <div class="tobi"><span class="tobi-dot"></span>BUMDes</div>
+                <div class="tobi"><span class="tobi-dot"></span>UKM</div>
+                <div class="tobi"><span class="tobi-dot"></span>Berbadan Hukum PT</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Image: Target Audience -->
+        <div class="tgt-image-wrap reveal">
+          <img src="target.png" alt="Target Pasar AuliaSoft" />
         </div>
       </div>
     </section>
@@ -2998,6 +4071,56 @@
           </svg>
         </div>
       </div>
+
+      <!-- Use Case Explanations -->
+      <div class="reveal" style="max-width: 960px; margin: 2rem auto 0;">
+        <div class="uc-exp-wrap">
+          <div class="uc-exp-card">
+            <div class="uc-exp-num">1</div>
+            <div class="uc-exp-title">Operasional Toko &amp; Kasir</div>
+            <div class="uc-exp-desc">
+              Fitur utama untuk transaksi penjualan langsung di kasir dengan
+              berbagai metode pembayaran.
+            </div>
+            <ul class="uc-exp-list">
+              <li>Transaksi penjualan di kasir</li>
+              <li>Pembayaran QRIS &amp; kartu kredit</li>
+              <li>Kelola keranjang belanja</li>
+              <li>Pengelolaan stok otomatis</li>
+            </ul>
+          </div>
+          <div class="uc-exp-card">
+            <div class="uc-exp-num">2</div>
+            <div class="uc-exp-title">Administrasi &amp; Manajemen</div>
+            <div class="uc-exp-desc">
+              Mengelola data pengguna, hak akses, dan konfigurasi sistem
+              sesuai kebutuhan toko.
+            </div>
+            <ul class="uc-exp-list">
+              <li>Manajemen user &amp; karyawan</li>
+              <li>Atur hak akses (role-based)</li>
+              <li>Pengaturan parameter sistem</li>
+              <li>Riwayat login &amp; aktivitas</li>
+            </ul>
+          </div>
+          <div class="uc-exp-card">
+            <div class="uc-exp-num">3</div>
+            <div class="uc-exp-title">Pemilik Toko &amp; Pengawasan</div>
+            <div class="uc-exp-desc">
+              Pemilik toko bisa memantau performa bisnis secara real-time dari
+              mana saja.
+            </div>
+            <ul class="uc-exp-list">
+              <li>Data supplier &amp; pelanggan</li>
+              <li>Laporan penjualan &amp; keuangan</li>
+              <li>Monitoring bisnis harian</li>
+              <li>Export laporan ke Excel/PDF</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Use Case Image -->
+      </div>
     </section>
 
     <div class="div"></div>
@@ -3169,6 +4292,86 @@
         </div>
       </div>
     </section>
+
+    <div class="div"></div>
+
+    <!-- CUSTOMIZATION -->
+    <section id="customization" style="background: var(--light);">
+      <div class="reveal" style="max-width: 1120px; margin: 0 auto;">
+        <div class="center" style="margin-bottom: 2rem;">
+          <span class="sec-tag">Kustomisasi</span>
+          <h2>Flexible &amp; Adaptif untuk<br /><em>Semua Jenis Usaha</em></h2>
+          <p class="sec-sub">
+            AuliaSoft menawarkan fleksibilitas kustomisasi tinggi agar sistem
+            dapat disesuaikan dengan kebutuhan operasional berbagai jenis usaha.
+          </p>
+        </div>
+        <div class="cust-wrap">
+          <!-- Left -->
+          <div class="cust-left reveal">
+            <div class="cust-header">
+              <div class="cust-header-icon">⚙️</div>
+              <div class="cust-header-text">
+                <h3>Disesuaikan dengan Kebutuhan Anda</h3>
+                <p>
+                  Pemilik usaha dapat mengatur input data sesuai dengan bidang
+                  usaha masing-masing.
+                </p>
+              </div>
+            </div>
+            <div class="cust-desc">
+              <strong>Kategori usaha</strong> yang didukung antara lain
+              <strong>Retail (toko warung)</strong>, <strong>Klinik</strong>,
+              hingga <strong>Toko Bangunan</strong> — cukup dengan mengatur
+              kategori produk dan alur pencatatan stok sesuai karakteristik
+              bisnis Anda.
+            </div>
+            <div class="cust-cards">
+              <div class="cust-card">
+                <div class="cust-card-icon">🏪</div>
+                <div class="cust-card-title">Retail / Toko</div>
+                <div class="cust-card-desc">
+                  Kategori produk &amp; stok bisa disesuaikan
+                </div>
+              </div>
+              <div class="cust-card">
+                <div class="cust-card-icon">🏥</div>
+                <div class="cust-card-title">Klinik / Kesehatan</div>
+                <div class="cust-card-desc">
+                  Input data sesuai flow klinik
+                </div>
+              </div>
+              <div class="cust-card">
+                <div class="cust-card-icon">🏗️</div>
+                <div class="cust-card-title">Toko Bangunan</div>
+                <div class="cust-card-desc">
+                  Alur stok &amp; satuan khusus material
+                </div>
+              </div>
+              <div class="cust-card">
+                <div class="cust-card-icon">🍽️</div>
+                <div class="cust-card-title">Kuliner / F&B</div>
+                <div class="cust-card-desc">
+                  Kelola menu &amp; pesanan restoran
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="cust-right reveal">
+            <div class="cust-img-box">
+              <img src="gambarnya.png" alt="Ilustrasi Kustomisasi" />
+              <div class="cust-img-caption">
+                Contoh tampilan kustomisasi — atur kategori &amp; alur sesuai usaha Anda
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="div"></div>
 
     <!-- FITUR -->
     <section id="fitur">
@@ -4056,6 +5259,201 @@
 
     <div class="div"></div>
 
+    <!-- PRODUCT ROADMAP -->
+    <section id="roadmap" style="background: var(--light);">
+      <div class="reveal" style="max-width: 1120px; margin: 0 auto;">
+        <div class="center" style="margin-bottom: 2.5rem;">
+          <span class="sec-tag">Product Roadmap</span>
+          <h2>Perjalanan Fitur <em>AuliaSoft E-POS</em></h2>
+          <p class="sec-sub">
+            Dari dasar hingga fitur enterprise — pilih paket yang sesuai kebutuhan
+            bisnis Anda dan berkembang bersama kami.
+          </p>
+        </div>
+
+        <!-- Roadmap Timeline -->
+        <div class="rm-timeline">
+          <!-- Basic -->
+          <div class="rm-col">
+            <div class="rm-header rm-basic">
+              <div class="rm-badge">Dasar</div>
+              <div class="rm-ver">Basic</div>
+              <div class="rm-tagline">
+                Pondasi awal digitalisasi kasir untuk UMKM
+              </div>
+            </div>
+            <div class="rm-features">
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🏪</span>
+                <span class="rm-feat-txt">Single Outlet</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🌐</span>
+                <span class="rm-feat-txt">Toko Online</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🖥️</span>
+                <span class="rm-feat-txt">Aplikasi Kasir Online</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📦</span>
+                <span class="rm-feat-txt">Manajemen Inventori</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">👥</span>
+                <span class="rm-feat-txt">CRM</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📊</span>
+                <span class="rm-feat-txt">Laporan Lengkap</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">👤</span>
+                <span class="rm-feat-txt">Manajemen Karyawan</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">💰</span>
+                <span class="rm-feat-txt">Pencatatan Keuangan</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📱</span>
+                <span class="rm-feat-txt">Digital Payment (QRIS)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow -->
+          <div class="rm-arrow">
+            <div class="rm-arrow-line"></div>
+            <div class="rm-arrow-head">➤</div>
+          </div>
+
+          <!-- Standard -->
+          <div class="rm-col">
+            <div class="rm-header rm-standard">
+              <div class="rm-badge rm-badge-pop">Populer</div>
+              <div class="rm-ver">Standard</div>
+              <div class="rm-tagline">
+                Untuk usaha yang berkembang dan butuh kontrol lebih
+              </div>
+            </div>
+            <div class="rm-features">
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🏬</span>
+                <span class="rm-feat-txt">Multi Outlet &amp; Toko Online</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🖥️</span>
+                <span class="rm-feat-txt">Kasir Online (Meja &amp; Multi-satuan)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📦</span>
+                <span class="rm-feat-txt">Stok (COGS, Produksi, Transfer Outlet)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">👥</span>
+                <span class="rm-feat-txt">CRM &amp; Deposit Pelanggan</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📊</span>
+                <span class="rm-feat-txt">Laporan Analisis Bisnis Lengkap</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🕒</span>
+                <span class="rm-feat-txt">SDM (Absensi Foto &amp; Otorisasi)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📋</span>
+                <span class="rm-feat-txt">Akuntansi (Faktur, CoA, Auto Posting)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📱</span>
+                <span class="rm-feat-txt">Digital Payment (QRIS Dynamic, EDC)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📲</span>
+                <span class="rm-feat-txt">Aplikasi Owner</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🛒</span>
+                <span class="rm-feat-txt">Order Online</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow -->
+          <div class="rm-arrow">
+            <div class="rm-arrow-line"></div>
+            <div class="rm-arrow-head">➤</div>
+          </div>
+
+          <!-- Premium -->
+          <div class="rm-col">
+            <div class="rm-header rm-premium">
+              <div class="rm-badge rm-badge-top">Terbaik</div>
+              <div class="rm-ver">Premium</div>
+              <div class="rm-tagline">
+                Otomatisasi penuh, omnichannel &amp; payroll
+              </div>
+            </div>
+            <div class="rm-features">
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🏬</span>
+                <span class="rm-feat-txt">Multi Outlet &amp; Omnichannel</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🌐</span>
+                <span class="rm-feat-txt">Toko Online (Website, Webtree, dll)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🖥️</span>
+                <span class="rm-feat-txt">Kasir Canggih (Reservasi, Komisi, Serial/Batch)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📦</span>
+                <span class="rm-feat-txt">Inventori Lanjutan (COGS Average, Produksi Stok)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">👥</span>
+                <span class="rm-feat-txt">CRM (Deposit Pelanggan)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🕒</span>
+                <span class="rm-feat-txt">SDM (Absensi Foto &amp; Otorisasi)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📱</span>
+                <span class="rm-feat-txt">Digital Payment</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">🛒</span>
+                <span class="rm-feat-txt">Order Online (Web Order, QR Emenu, Grabfood)</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">📋</span>
+                <span class="rm-feat-txt">Akuntansi Full</span>
+              </div>
+              <div class="rm-feat-item">
+                <span class="rm-feat-icon">👥</span>
+                <span class="rm-feat-txt">Sistem Aulia Teams</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upgrade note -->
+        <div class="rm-note reveal">
+          <span class="rm-note-icon">💡</span>
+          <span>
+            Mulai dari <strong>Basic</strong>, upgrade kapan saja sesuai
+            pertumbuhan bisnis Anda — tanpa kehilangan data.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <div class="div"></div>
+
     <!-- PERBANDINGAN -->
     <section id="perbandingan">
       <div class="reveal center">
@@ -4722,6 +6120,85 @@
               Tim kami akan menghubungi dalam 1×24 jam
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPETITOR / MITRA -->
+    <section id="competitor">
+      <div class="comp2-inner">
+        <div class="comp2-badge">COMPETITOR</div>
+        <h2 class="comp2-title">
+          Dipercaya oleh Ribuan Mitra di Seluruh Indonesia
+        </h2>
+        <p class="comp2-desc">
+          E-POS AuliaSoft telah menjadi solusi bisnis bagi puluhan ribu pelaku
+          UMKM, minimarket, toko kelontong, dan usaha lainnya di berbagai
+          provinsi. Bersama mitra, kami terus berkembang dan berinovasi untuk
+          memberikan yang terbaik bagi ekosistem bisnis Indonesia.
+        </p>
+        <div class="comp2-img-wrap">
+          <img src="Mitra.avif" alt="Mitra AuliaSoft E-POS" />
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESSES AND POLICIES -->
+    <section id="processes">
+      <div class="proc-inner">
+        <div class="proc-badge">INFORMASI</div>
+        <h2 class="proc-title">Processes &amp; Policies</h2>
+        <p class="proc-subtitle">
+          Proses operasional dan kebijakan utama yang mendukung penggunaan
+          AuliaSoft POS dalam aktivitas bisnis.
+        </p>
+        <div class="proc-grid">
+          <div class="proc-card">
+            <div class="proc-icon">🛡️</div>
+            <h3>Kebijakan Garansi</h3>
+            <p>
+              Memberikan perlindungan investasi melalui garansi aplikasi selama
+              1,5 tahun, sehingga sistem tetap berjalan optimal dan meminimalkan
+              kendala teknis setelah pembelian.
+            </p>
+          </div>
+          <div class="proc-card">
+            <div class="proc-icon">💬</div>
+            <h3>Support</h3>
+            <p>
+              Menyediakan layanan bantuan pelanggan yang cepat tanggap melalui
+              Support Online dan WhatsApp, untuk mendampingi pengguna mulai dari
+              instalasi, aktivasi, hingga konsultasi penggunaan sistem.
+            </p>
+          </div>
+          <div class="proc-card">
+            <div class="proc-icon">🎯</div>
+            <h3>Kebijakan Demo</h3>
+            <p>
+              Memberikan akses demo produk sebagai bentuk transparansi, sehingga
+              calon pengguna dapat mencoba fitur terlebih dahulu dan memastikan
+              kesesuaiannya dengan kebutuhan bisnis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLEMENTARY -->
+    <section id="complementary">
+      <div class="comp-inner">
+        <div class="comp-badge">FREE EXCLUSIVE</div>
+        <h2 class="comp-title">Complementary Package</h2>
+        <p class="comp-desc">
+          Setiap paket E-POS sudah termasuk bonus complementary eksklusif yang
+          tidak tersedia di tempat lain. Benar-benar gratis dan langsung bisa
+          digunakan!
+        </p>
+        <div class="comp-img-wrap">
+          <img
+            src="Complementary.png"
+            alt="Complementary Package AuliaSoft E-POS"
+          />
         </div>
       </div>
     </section>
